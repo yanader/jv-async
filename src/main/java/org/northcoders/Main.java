@@ -12,8 +12,12 @@ public class Main {
 //            ExerciseFour.returnHelloThrowError();
 //        }
 //        ExerciseFive.printBigFactorials();
-        ExerciseSix.printBigFactorialsAndInterruptWithPoem();
-
+//        ExerciseSix.printBigFactorialsAndInterruptWithPoem();
+        try {
+            ExerciseSeven.printHelloThreeTimes();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
