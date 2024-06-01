@@ -1,5 +1,7 @@
 package org.northcoders;
 
+import java.time.LocalDateTime;
+
 import static java.lang.Thread.sleep;
 
 public class Main {
@@ -18,7 +20,29 @@ public class Main {
 //        } catch (InterruptedException e) {
 //            throw new RuntimeException(e);
 //        }
-        ExerciseEight.multiThreadFactorialPrinting();
+//        ExerciseEight.multiThreadFactorialPrinting();
+        exerciseNineTaskScheduler();
+
+
+
+    }
+
+    public static void exerciseNineTaskScheduler() {
+        TaskScheduler taskScheduler = new TaskScheduler(2);
+        Runnable taskOne = () -> System.out.println("taskOne");
+        Runnable taskTwo = () -> System.out.println("taskTwo");
+        LocalDateTime taskOneTime = LocalDateTime.now().plusSeconds(5);
+        LocalDateTime taskTwoTime = LocalDateTime.now().plusSeconds(3);
+
+        taskScheduler.scheduleTask(taskOne, taskOneTime);
+        taskScheduler.scheduleTask(taskTwo, taskTwoTime);
+
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        taskScheduler.shutdown();
 
     }
 }
