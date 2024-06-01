@@ -13,11 +13,12 @@ public class Main {
 //        }
 //        ExerciseFive.printBigFactorials();
 //        ExerciseSix.printBigFactorialsAndInterruptWithPoem();
-        try {
-            ExerciseSeven.printHelloThreeTimes();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            ExerciseSeven.printHelloThreeTimes();
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+        ExerciseEight.multiThreadFactorialPrinting();
 
     }
 }
