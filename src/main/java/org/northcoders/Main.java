@@ -23,7 +23,8 @@ public class Main {
 //        ExerciseEight.multiThreadFactorialPrinting();
 //        exerciseNineTaskScheduler();
 //            ExerciseTen.sumArrayParallel();
-        ExerciseEleven.sumOneThousandRandomInts();
+//        ExerciseEleven.sumOneThousandRandomInts();
+        ExerciseTwelve.aSyncProcessWebPage();
 
     }
 
