@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 public class TaskScheduler {
     private final ScheduledExecutorService scheduler;
 
-    public TaskScheduler(int threadPooleSize) {
-        this.scheduler = Executors.newScheduledThreadPool(threadPooleSize);
+    public TaskScheduler(int threadPoolSize) {
+        this.scheduler = Executors.newScheduledThreadPool(threadPoolSize);
     }
 
     public void scheduleTask(Runnable runnable, LocalDateTime scheduledTime) {

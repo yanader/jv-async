@@ -21,8 +21,8 @@ public class Main {
 //            throw new RuntimeException(e);
 //        }
 //        ExerciseEight.multiThreadFactorialPrinting();
-        exerciseNineTaskScheduler();
-
+//        exerciseNineTaskScheduler();
+            ExerciseTen.sumArrayParallel();
 
 
     }
@@ -35,6 +35,7 @@ public class Main {
         LocalDateTime taskTwoTime = LocalDateTime.now().plusSeconds(3);
 
         taskScheduler.scheduleTask(taskOne, taskOneTime);
+        taskScheduler.scheduleTask(taskOne, LocalDateTime.now());
         taskScheduler.scheduleTask(taskTwo, taskTwoTime);
 
         try {
